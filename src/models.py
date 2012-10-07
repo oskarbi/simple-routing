@@ -9,14 +9,21 @@ class Stop(object):
         self.lat = stop_lat
         self.lon = stop_lon
         self.neighbors = []
+        self.trips = []
 
     def add_neighbor(self, stop):
         """Add a stop_id as this stop's neighbor."""
         self.neighbors.append(stop)
 
+    def add_trip(self, trip_id):
+        self.trips.append(trip_id)
+
     def get_neighbors(self):
         """Return the list of this stop's neighbors."""
         return self.neighbors
+
+    def get_trips(self):
+        return self.trips
 
     def get_distance(self, stop):
         """Return the euclidean distance between two nodes."""
@@ -56,5 +63,6 @@ class Graph(object):
         """Return the list of stop_ids in the graph."""
         return self.stops.keys()
 
-    def add_trip(self, trip):
-        pass
+    def add_trip(self, trip_id, stop_list):
+        """Add a trip to the graph. A trip is just a list of stop_ids."""
+        self.trips[trip_id] = stop_list
