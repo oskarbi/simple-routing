@@ -1,0 +1,5 @@
+fare_id,route_id,origin_id,destination_id,contains_id
+3642,,41,41,
+3643,,41,42,
+3644,,42,41,
+3645,,42,42,

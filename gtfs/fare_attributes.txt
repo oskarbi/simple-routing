@@ -1,0 +1,5 @@
+fare_id,price,currency_type,payment_method,transfers,transfer_duration
+3642,1.35,EUR,0,0,0
+3643,1.9,EUR,0,0,0
+3644,1.9,EUR,0,0,0
+3645,1.35,EUR,0,0,0
